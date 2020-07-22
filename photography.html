@@ -1,287 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>photograhy</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于Masonry瀑布流的全屏预览图片画廊插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/pubu.css">
+	<link rel="stylesheet" href="css/chromagallery.css">
+	<style type="text/css">
+		body,html
+		{
+			height: 100%;
+		}
+		.content
+		{
+			width: 100%;
+			height: 100%;
+			margin: 10px auto;
+		}
+		@media screen and (min-width: 980px) /* Desktop */ {
+		  .content {
+		    width: 70%;
+		  }
+		}		
+		.mygallery
+		{
+			margin: 25px 0;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<article class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>基于Masonry瀑布流的全屏预览图片画廊插件 <span>An image gallery that allows you to organize your photos into grids and enlarge them elegantly</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/pubuliuchajian/201510282715.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="content">
+			<div class="chroma-gallery mygallery">
+				<img src="images/thumbs/image_1.jpg" alt="cat" data-largesrc="images/image_1.jpg">
+				<img src="images/thumbs/image_2.jpg" alt="Pic 2" data-largesrc="images/image_2.jpg">
+				<img src="images/thumbs/image_3.jpg" alt="Pic 3" data-largesrc="images/image_3.jpg">
+				<img src="images/thumbs/image_4.jpg" alt="Pic 4" data-largesrc="images/image_4.jpg">
+				<img src="images/thumbs/image_5.jpg" alt="Pic 5" data-largesrc="images/image_5.jpg">
+				<img src="images/thumbs/image_6.jpg" alt="Pic 6" data-largesrc="images/image_6.jpg">
+				<img src="images/thumbs/image_7.jpg" alt="Pic 7" data-largesrc="images/image_7.jpg">
+				<img src="images/thumbs/image_8.jpg" alt="Pic 8" data-largesrc="images/image_8.jpg">
+				<img src="images/thumbs/image_9.jpg" alt="Pic 9" data-largesrc="images/image_9.jpg">
+				<img src="images/thumbs/image_10.jpg" alt="Pic 10" data-largesrc="images/image_10.jpg">
+				<img src="images/thumbs/image_11.jpg" alt="Pic 11" data-largesrc="images/image_11.jpg">
+				<img src="images/thumbs/image_12.jpg" alt="Pic 12" data-largesrc="images/image_12.jpg">
+			</div>
+		</div>
+		<!-- <footer class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201509282629.html">
+			  <img src="related/1.jpg" width="300" alt="5种超炫jQuery和CSS3响应式弹出层图片画廊特效"/>
+			  <h3>5种超炫jQuery和CSS3响应式弹出层图片画廊特效</h3>
+			</a>
+			<a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201508282489.html">
+			  <img src="related/2.jpg" width="300" alt="jQuery轻量级响应式LightBox图片画廊插件"/>
+			  <h3>jQuery轻量级响应式LightBox图片画廊插件</h3>
+			</a>
+		</footer> -->
+	</article>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/chromagallery.pkgd.min.js"></script>
+	<script type="text/javascript">
+		// $(document).ready(function() 
+		// {
+		//     $(".mygallery").chromaGallery();
+		// });
+		$(document).ready(function(){
+			$(".mygallery").chromaGallery
+		    ({
+		        color:'#000',
+		        gridMargin:15,
+		        maxColumns:4,
+		        dof:true,
+		        screenOpacity:0.8,
+			});
+		});
 		
-		<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet"> -->
-		
-		<link rel="shortcut icon" href="images/ice.png" type="image/x-icon"/>
-		<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-		<link rel="stylesheet" href="css/animate.css">
-		
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/owl.theme.default.min.css">
-		<link rel="stylesheet" href="css/magnific-popup.css">
-
-		<link rel="stylesheet" href="css/aos.css">
-
-		<link rel="stylesheet" href="css/ionicons.min.css">
-
-		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-		<link rel="stylesheet" href="css/jquery.timepicker.css">
-
-		
-		<link rel="stylesheet" href="css/flaticon.css">
-		<link rel="stylesheet" href="css/icomoon.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-
-		<div id="colorlib-page">
-			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-			
-			<!-- 侧边栏 -->
-			<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-				<h1 id="colorlib-logo"><a href="index.html">elen<span>.</span></a></h1>
-				<nav id="colorlib-main-menu" role="navigation">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li class="colorlib-active"><a href="photography.html">Photography</a></li>
-						<li><a href="travel.html">Travel</a></li>
-						<li><a href="fashion.html">Fashion</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</nav>
-
-				<div class="colorlib-footer">
-					<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This homepage is made with <i class="icon-heart" aria-hidden="true"></i> by <b>Wenbo Wang</b></p>
-					<ul>
-						<li><a href="https://user.qzone.qq.com/1624949784" target="_blank"><i class="icon-QQ"></i></a></li>
-						<li><a href="https://github.com/qtxsnwwb/" target="_blank"><i class="icon-github"></i></a></li>
-						<li><a href="https://weibo.com/u/6310083553?is_all=1" target="_blank"><i class="icon-weibo"></i></a></li>
-					</ul>
-				</div>
-			</aside> <!-- END COLORLIB-ASIDE -->
-			
-			<!-- 中间主体部分 -->
-			<div id="colorlib-main">
-				<!-- 照片部分 -->
-				<section class="ftco-section-2">
-					<div class="photograhy">
-						<div class="row no-gutters">
-							<!-- 照片1 -->
-							<div class="col-md-3">
-								<a href="images/image_1.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Lovely Girlfriend</h3>
-										<span>Daily life</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片2 -->
-							<div class="col-md-3">
-								<a href="images/image_2.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_2.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Art Gallery, Wuhan</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片3 -->
-							<div class="col-md-3">
-								<a href="images/image_3.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_3.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Donghu, Wuhan</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片4 -->
-							<div class="col-md-3">
-								<a href="images/image_4.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_4.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Shouxihu, Yangzhou</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片5 -->
-							<div class="col-md-3">
-								<a href="images/image_5.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_5.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Heyuan, Yangzhou</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片6 -->
-							<div class="col-md-3">
-								<a href="images/image_6.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_6.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Changjiang, Wuhan</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片7 -->
-							<div class="col-md-3">
-								<a href="images/image_7.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_7.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Jiangtan, Wuhan</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片8 -->
-							<div class="col-md-3">
-								<a href="images/image_8.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_8.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Damingsi, Yangzhou</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片9 -->
-							<div class="col-md-3">
-								<a href="images/image_9.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_9.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Tanhualin, Wuhan</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片10 -->
-							<div class="col-md-3">
-								<a href="images/image_10.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_10.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>Donghu, Wuhan</h3>
-										<span>Travel</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片11 -->
-							<div class="col-md-3">
-								<a href="images/image_11.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_11.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>lovers</h3>
-										<span>Daily life</span>
-									</div>
-								</a>
-							</div>
-							<!-- 照片12 -->
-							<div class="col-md-3">
-								<a href="images/image_12.jpg" target="_blank" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_12.jpg);">
-									<div class="overlay"></div>
-									<div class="text text-center">
-										<h3>lovers</h3>
-										<span>Daily life</span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				<!-- 主体部分底部栏 -->
-				<footer class="ftco-footer ftco-bg-dark ftco-section">
-					<!-- 底部栏容器 -->
-					<div class="container px-md-5">
-						<!-- 上半部分 -->
-						<div class="row mb-5">
-							<!-- Category：第一列 -->
-							<div class="col-md">
-								<div class="ftco-footer-widget mb-4 ml-md-4">
-									<h2 class="ftco-heading-2">Category</h2>
-									<ul class="list-unstyled categories">
-										<li><a href="https://blog.csdn.net/wwb44444/category_10012495.html">Machine Learning <span>(1)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/category_10005454.html">Database <span>(1)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/category_6914443.html">Java <span>(2)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/category_6994439.html">SE and Spider <span>(6)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/category_7045714.html">Assembly Language <span>(1)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/category_8623754.html">Algorithm <span>(1)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">Prose <span>(70)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">Literature <span>(17)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">Lyric <span>(23)</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- Archives：第二列 -->
-							<div class="col-md">
-								<div class="ftco-footer-widget mb-4">
-									<h2 class="ftco-heading-2">Archives</h2>
-									<ul class="list-unstyled categories">
-										<li><a href="https://blog.csdn.net/wwb44444/article/month/2020/05">May 2020 <span>(2)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/article/month/2019/08">August 2019 <span>(1)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/article/month/2019/01">January 2019 <span>(1)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2019 <span>(3)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2018 <span>(2)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/article/month/2017/07">July 2017 <span>(5)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/article/month/2017/06">June 2017 <span>(2)</span></a></li>
-										<li><a href="https://blog.csdn.net/wwb44444/article/month/2017/05">May 2017 <span>(2)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2017 <span>(1)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2016 <span>(6)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2015 <span>(10)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2013 <span>(4)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2012 <span>(16)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2011 <span>(40)</span></a></li>
-										<li><a href="https://user.qzone.qq.com/1624949784/blog">2010 <span>(28)</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- Questions：第三列 -->
-							<div class="col-md">
-								<div class="ftco-footer-widget mb-4">
-									<h2 class="ftco-heading-2">Have a Questions?</h2>
-									<div class="block-23 mb-3">
-										<ul>
-											<li><span class="icon icon-location2"></span><span class="text">1B 505 Yaolingyuan, Yaohai, Hefei, AnHui, China</span></li>
-											<li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 814 0520 096</span></a></li>
-											<li><a href="#"><span class="icon icon-envelop"></span><span class="text">wangwenbo@whut.edu.cn</span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- 下半部分 -->
-						<div class="row">
-							<div class="col-md-12">
-				
-								<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div><!-- END COLORLIB-MAIN -->
-		</div><!-- END COLORLIB-PAGE -->
-
-		<!-- 加载动画 -->
-		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/jquery.waypoints.min.js"></script>
-		<script src="js/jquery.stellar.min.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/aos.js"></script>
-		<script src="js/jquery.animateNumber.min.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		<script src="js/jquery.timepicker.min.js"></script>
-		<script src="js/scrollax.min.js"></script>
-		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
-		<script src="js/google-map.js"></script>
-		<script src="js/main.js"></script>
-    
-	</body>
+	</script>
+</body>
 </html>
