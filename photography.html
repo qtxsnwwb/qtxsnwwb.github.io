@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/pubu.css">
 	<link rel="stylesheet" href="css/chromagallery.css">
 	<link rel="stylesheet" href="css/icomoon.css" />
+	<link rel="stylesheet" href="css/audioplayer.css" />
 	<style type="text/css">
 		body,html
 		{
@@ -77,18 +78,26 @@
 			 -moz-transform: rotate(0deg) translate3d(50px, 50px, 50px);
 			}
 		}
+		audio{ display: inline-block; *display: inline; *zoom: 1; }
+		audio:not([controls])	{ display: none; }
 	</style>
 	<!--[if IE]>
 		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
 <body>
+	
 	<article class="htmleaf-container">
 		<header class="htmleaf-header">
 			<h1>Wenbo Wang's photo gallery <span>A photo tells a story. Read you with my life.</span></h1>
 			<div class="htmleaf-links">
 				<a class="htmleaf-icon icon-QQ" href="https://user.qzone.qq.com/1624949784/4" title="进入QQ空间查看更多相片" target="_blank"><span> jQuery之家</span></a>
 				<a class="htmleaf-icon icon-redo2" href="#" title="返回上一页" onclick="javascript:history.back(-1);"><span> 返回下载页</span></a>
+			</div>
+			<div id="wrapper" style="width: 50%;margin: 0 auto 0 auto;">
+				<audio preload="auto" controls >
+					<source src="music/always_with_me.mp3">
+				</audio>
 			</div>
 		</header>
 		<div class="content">
@@ -120,6 +129,8 @@
 	</div>
 		
 	<script src="js/jquery.min.js"></script>
+	<script src="js/audioplayer.min.js"></script>
+	<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
 	<script src="js/chromagallery.pkgd.min.js"></script>
 	<script src="js/jquery.transit.js"></script>
 	<script type="text/javascript">
