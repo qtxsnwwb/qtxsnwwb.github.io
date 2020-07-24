@@ -123,5 +123,20 @@
 			"url":"https://user.qzone.qq.com/1624949784/blog"
 		}
 	],
-	"intro":"I am a graduate student from Navigation school of WHUT and major in trajectory data mining using tensor learning. My interest is Chinese traditional culture and history. Welcome to your coming."
+	"intro":"I am a graduate student from Navigation school of WHUT and major in trajectory data mining using tensor learning. My interest is Chinese traditional culture and history. Welcome to your coming.",
+	"blog":{
+		"figcaption":{
+			"title_1":"Machine-Learning",
+			"title_2":"Blog",
+			"keyword":"Urban anomaly analytics. Detection. Prediction."
+		},
+		"url":"https://blog.csdn.net/wwb44444/article/details/106157938",
+		"category_url":"https://blog.csdn.net/wwb44444/category_10012495.html",
+		"title":"Talk from 'Urban Anomaly Analytics: Description,Detection,and Prediction'",
+		"intro":"The latest development of urban anomaly analytics. Introduce detection and Prediction algorithm about urban anomaly analytics.",
+		"date":"May. 17, 2020",
+		"heart":0,
+		"eye":550,
+		"comment":0
+	}
 }
