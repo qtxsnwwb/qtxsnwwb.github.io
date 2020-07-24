@@ -21,8 +21,6 @@
 	<link rel="stylesheet" href="css/ionicons.min.css">
 
 	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
-
 
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
@@ -75,7 +73,45 @@
 							<p class="mb-4">I am a graduate student from Navigation school of WHUT and 
 							major in trajectory data mining using tensor learning. My interest is Chinese
 							traditional culture and history. Welcome to your coming.</p>
-							<p><a href="#" class="btn-custom">More About Me <span class="ion-ios-arrow-forward"></span></a></p>
+							<p><a href="#myModal" class="btn-custom" data-toggle="modal">More About Me <span class="ion-ios-arrow-forward"></span></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 简历模态框 -->
+			<div class="modal fade" id="myModal" style="top: 150px;">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<!-- 模态框头部 -->
+						<div class="modal-header">
+							<h4 class="modal-title">Wenbo Wang's CV</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<!-- 模态框主体 -->
+						<div class="modal-body table-responsive">
+							<table class="table table-light table-hover table-bordered">
+								<tr>
+									<td>Name:Wenbo Wang</td>
+									<td>Birthday:1997.05.25</td>
+									<td>Gender:male</td>
+								</tr>
+								<tr>
+									<td>Nationality:han</td>
+									<td>Native place:Wuhan</td>
+									<td>Address:Yaolingyuan, Hefei, China</td>
+								</tr>
+								<tr>
+									<td>Tel:181 4052 0096</td>
+									<td>E-mail:wangwenbo@whut.edu.cn</td>
+									<td>College:WHUT</td>
+								</tr>
+							</table>
+						</div>
+						<!-- 模态框底部 -->
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal" style="border-radius: 10px;">close</button>
+							<button type="button" class="btn" id="cv_detail" style="border-radius: 10px;background-color: #0088CC;color: #fff;">View resume details</button>
 						</div>
 					</div>
 				</div>
@@ -643,10 +679,7 @@
 					<!-- 下半部分 -->
 					<div class="row">
 						<div class="col-md-12">
-
-							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
 						</div>
 					</div>
 				</div>
@@ -670,11 +703,17 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/jquery.timepicker.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#cv_detail").click(function(){
+				window.location.href="about.html";
+			});
+		});
+	</script>
 
 </body>
- </html>
+</html>
