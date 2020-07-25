@@ -56,19 +56,5 @@
 			"date":"2017"
 		}
 	],
-	"intro":"My projects are mainly about life application and tensor-learning. Most codes are typed with Java or python. You can read README.md or project file to learn more.",
-	"cover":[
-		{
-			"title":"Poem and Dream",
-			"desc":"Life is not only about compromise, but also poems and dreams."
-		},
-		{
-			"title":"Sorrow and evening",
-			"desc":"Sorrow is hushed into peace in my heart like the evening among the slient trees."
-		},
-		{
-			"title":"Star and firefly",
-			"desc":"The stars are not afriad to appear like fireflies."
-		}
-	]
+	"intro":"My projects are mainly about life application and tensor-learning. Most codes are typed with Java or python. You can read README.md or project file to learn more."
 }
