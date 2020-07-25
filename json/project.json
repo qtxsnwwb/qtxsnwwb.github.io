@@ -10,6 +10,50 @@
 			"title":"GridRiskProject",
 			"intro":"Grid risk prediction project, including dataprocessing, VCRO model and tensor learning prediction algorithm.",
 			"date":"2020"
+		},
+		{
+			"figcaption":{
+				"title_1":"Spider",
+				"title_2":"Project",
+				"keyword":"Python. Tkinker. News, music and movie. Spider."
+			},
+			"url":"https://github.com/qtxsnwwb/SpiderProject",
+			"title":"Panisuoxiang",
+			"intro":"Using python spider to crawling information about news,musics and movies from serveral websites to break down information barriers.",
+			"date":"2020"
+		},
+		{
+			"figcaption":{
+				"title_1":"Medical",
+				"title_2":"Project",
+				"keyword":"Android. Medical application. Html."
+			},
+			"url":"https://github.com/qtxsnwwb/MedicalProject",
+			"title":"Qianjinfang",
+			"intro":"Android application for patients to see a doctor expendiently. Meanwhile, apply website for medical institutions to use and manage.",
+			"date":"2020"
+		},
+		{
+			"figcaption":{
+				"title_1":"shuqu",
+				"title_2":"Project",
+				"keyword":"Book manage. Recommendation system. Machine learning. Java Web."
+			},
+			"url":"https://github.com/qtxsnwwb/shuqu",
+			"title":"shuqu",
+			"intro":"A book management system including recommendation system, book system, spider system, communication system and so on. Finished in my junior period with Jinshen Guo and Weiyu Chen.",
+			"date":"2018"
+		},
+		{
+			"figcaption":{
+				"title_1":"EnterpriseApplication",
+				"title_2":"Project",
+				"keyword":"Recruitment management system. Java Web."
+			},
+			"url":"https://github.com/qtxsnwwb/EnterpriseApplication",
+			"title":"Zhonglixunta",
+			"intro":"Enterprise network application recruitment management system including requisition system and management system.",
+			"date":"2017"
 		}
 	]
 }
