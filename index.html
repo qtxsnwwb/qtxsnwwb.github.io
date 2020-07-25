@@ -124,7 +124,7 @@
 					<div class="row justify-content-center mb-5 pb-2">
 						<div class="col-md-7 heading-section text-center ftco-animate">
 							<h2 class="mb-4">Articles</h2>
-							<p>Let life be beautiful like summer flowers and death like autumn leaves.</p>
+							<p></p>
 						</div>
 					</div>
 					
@@ -560,8 +560,8 @@
 	<script src="js/main.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			//加载json
-			$.getJSON("https://qtxsnwwb.github.io/data.json",function(data){
+			//加载底部栏json
+			$.getJSON("https://qtxsnwwb.github.io/json/bottom.json",function(data){
 				//填入侧边栏categories以及底部栏category
 				var categories = data.categories;
 				for(var i=0; i<categories.length; i++){
@@ -573,11 +573,17 @@
 					$("ul#archives").append('<li><a href="'+archives[i].url+'">'+archives[i].date+' <span>'+archives[i].number+'</span></a></li>')
 				}
 				//填入底部栏info
-				$(".block-23.mb-3 ul li").eq(0).html(data.info.address);
+				$(".block-23.mb-3 ul li span.text").eq(0).html(data.info.address);
 				$(".block-23.mb-3 ul li").eq(1).html('<a href="tel:\\'+data.info.phone+'"><span class="icon icon-phone"></span><span class="text">'+data.info.phone+'</span></a>');
 				$(".block-23.mb-3 ul li").eq(2).html('<a href="mailto:'+data.info.email+'"><span class="icon icon-envelop"></span><span class="text">'+data.info.email+'</span></a>');
+			});
+			
+			//加载主体部分json
+			$.getJSON("https://qtxsnwwb.github.io/json/index.json",function(data){
 				//填入主体部分介绍
 				$(".desc p.mb-4").html(data.intro)
+				//填入主体部分格言
+				$(".col-md-7.heading-section.text-center.ftco-animate p").html(data.motto);
 				//填入主体部分文章块
 				for(var i=0; i<$(".grid figcaption").length; i++){
 					$(".grid figcaption").eq(i).append('<h2>'+data.blog[i].figcaption.title_1+' <span>'+data.blog[i].figcaption.title_2+'</span></h2>')
@@ -592,9 +598,8 @@
 				for(var i=1; i<$('.half').length; i=i+2){
 					$('.half').eq(i).append('<p><a href="'+data.blog[(i-1)/2].url+'" class="btn py-2" target="_blank">Continue Reading <span class="ion-ios-arrow-forward"></span></a></p>');
 				}
-				
-				
 			});
+			
 		});
 		
 		$(function(){
