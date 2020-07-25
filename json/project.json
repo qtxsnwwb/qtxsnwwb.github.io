@@ -1,0 +1,15 @@
+{
+	"project":[
+		{
+			"figcaption":{
+				"title_1":"GridRisk",
+				"title_2":"Project",
+				"keyword":"Grid risk. Prediction. VCRO. Tensor learning."
+			},
+			"url":"https://github.com/qtxsnwwb/GridRiskProject",
+			"title":"GridRiskProject",
+			"intro":"Grid risk prediction project, including dataprocessing, VCRO model and tensor learning prediction algorithm.",
+			"date":"2020"
+		}
+	]
+}
