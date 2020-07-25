@@ -55,5 +55,6 @@
 			"intro":"Enterprise network application recruitment management system including requisition system and management system.",
 			"date":"2017"
 		}
-	]
+	],
+	"Intro":"My projects are mainly about life application and tensor-learning. Most codes are typed with Java or python. You can read README.md or project file to learn more."
 }
