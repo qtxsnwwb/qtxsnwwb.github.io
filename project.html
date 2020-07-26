@@ -331,13 +331,13 @@
 							</div>
 							
 							<!-- 标签云 -->
-							<div class="sidebar-box ftco-animate">
+							<div class="sidebar-box ftco-animate" style="margin-bottom: 0px;">
 								<h3 class="sidebar-heading">Tag Cloud</h3>
 								<div id='tag-cloud'></div>
 							</div>
 							
 							<!-- newsletter -->
-							<div class="sidebar-box subs-wrap img" style="background-image: url(images/bg_1.jpg);">
+							<!-- <div class="sidebar-box subs-wrap img" style="background-image: url(images/bg_1.jpg);">
 								<div class="overlay"></div>
 								<h3 class="mb-4 sidebar-heading">Newsletter</h3>
 								<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia</p>
@@ -347,7 +347,7 @@
 									  <input type="submit" value="Subscribe" class="mt-2 btn btn-white submit">
 									</div>
 								</form>
-							</div>
+							</div> -->
 							
 							<!-- archives -->
 							<div class="sidebar-box ftco-animate">
@@ -472,34 +472,24 @@
 			
 			//标签云特效
 		    var entries = [ 
-		        { label: 'Back to top', url: '#', target: '_top' },
-		        { label: 'Bootstrap', url: '#', target: '_top' },
-		        { label: 'Carousel', url: '#', target: '_top' },
-		        { label: 'Countdown', url: '#', target: '_top' },
-		        { label: 'Dropdown Menu', url: '#', target: '_top' },
-		        { label: 'CodePen', url: 'http://codepen.io/', target: '_top' },
-		        { label: 'three.js', url: 'http://threejs.org/', target: '_top' },
-		        { label: 'Form Validation', url: '#', target: '_top' },
-		        { label: 'JS Compress', url: 'http://jscompress.com/', target: '_top' },
-		        { label: 'TinyPNG', url: 'https://tinypng.com/', target: '_top' },
-		        { label: 'Can I Use', url: 'http://caniuse.com/', target: '_top' },
-		        { label: 'URL shortener', url: 'https://goo.gl/', target: '_top' },
-		        { label: 'Grid Layout', url: '#', target: '_top' },
-		        { label: 'Twitter', url: 'https://twitter.com/', target: '_top' },
-		        { label: 'deviantART', url: 'http://nkunited.deviantart.com/', target: '_top' },
-		        { label: 'Gulp', url: 'http://gulpjs.com/', target: '_top' },
-		        { label: 'Browsersync', url: 'https://www.browsersync.io/', target: '_top' },
-		        { label: 'GitHub', url: 'https://github.com/', target: '_top' },
-		        { label: 'Shadertoy', url: 'https://www.shadertoy.com/', target: '_top' },
-		        { label: 'Tree View', url: '#', target: '_top' },
-		        { label: 'jsPerf', url: 'http://jsperf.com/', target: '_top' },
-		        { label: 'Foundation', url: 'http://foundation.zurb.com/', target: '_top' },
-		        { label: 'CreateJS', url: 'http://createjs.com/', target: '_top' },
-		        { label: 'Velocity.js', url: 'http://julian.com/research/velocity/', target: '_top' },
-		        { label: 'TweenLite', url: 'https://greensock.com/docs/#/HTML5/GSAP/TweenLite/', target: '_top' },
-		        { label: 'jQuery', url: 'https://jquery.com/', target: '_top' },
-		        { label: 'Notification', url: '#', target: '_top' },
-		        { label: 'Parallax', url: '#', target: '_top' }
+		        { label: 'Github', url: 'https://www.github.com/qtxsnwwb', target: '_top' },
+		        { label: 'QQ', url: 'https://github.com/qtxsnwwb/', target: '_top' },
+		        { label: 'Weibo', url: 'https://weibo.com/u/6310083553?is_all=1', target: '_top' },
+		        { label: 'CSDN', url: 'https://me.csdn.net/wwb44444', target: '_top' },
+		        { label: 'Machine Learning', url: 'https://blog.csdn.net/wwb44444/category_10012495.html', target: '_top' },
+		        { label: 'Database', url: 'https://blog.csdn.net/wwb44444/category_10005454.html', target: '_top' },
+		        { label: 'Java', url: 'https://blog.csdn.net/wwb44444/category_6914443.html', target: '_top' },
+		        { label: 'SE and Spider', url: 'https://blog.csdn.net/wwb44444/category_6994439.html', target: '_top' },
+		        { label: 'Assembly Language', url: 'https://blog.csdn.net/wwb44444/category_7045714.html', target: '_top' },
+		        { label: 'Algorithm', url: 'https://blog.csdn.net/wwb44444/category_8623754.html', target: '_top' },
+		        { label: 'Prose', url: 'https://user.qzone.qq.com/1624949784/blog', target: '_top' },
+		        { label: 'Literature', url: 'https://user.qzone.qq.com/1624949784/blog', target: '_top' },
+		        { label: 'Lyric', url: 'https://user.qzone.qq.com/1624949784/blog', target: '_top' },
+		        { label: 'GridRiskProject', url: 'https://github.com/qtxsnwwb/GridRiskProject', target: '_top' },
+		        { label: 'SpiderProject', url: 'https://github.com/qtxsnwwb/SpiderProject', target: '_top' },
+		        { label: 'MedicalProject', url: 'https://github.com/qtxsnwwb/MedicalProject', target: '_top' },
+		        { label: 'shuqu', url: 'https://github.com/qtxsnwwb/shuqu', target: '_top' },
+		        { label: 'EnterpriseApplication', url: 'https://github.com/qtxsnwwb/EnterpriseApplication', target: '_top' }
 		    ];
 		
 		    var settings = {
@@ -518,7 +508,7 @@
 		        speed: 0.5,
 		        fontFamily: 'Oswald, Arial, sans-serif',
 		        fontSize: '10',
-		        fontColor: '#4090ff',
+		        fontColor: '#003399',
 		        fontWeight: 'bold',//bold
 		        fontStyle: 'normal',//italic 
 		        fontStretch: 'expanded',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
