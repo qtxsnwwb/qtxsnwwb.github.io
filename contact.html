@@ -25,6 +25,12 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style type="text/css">
+		#container{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
 <body>
 
@@ -67,9 +73,9 @@
 							<h2 class="h4 font-weight-bold">Contact Information</h2>
 						</div>
 						<div class="w-100"></div>
-							<div class="col-md-3">
-								<p><span>Address:</span> 1B 505 Yaolingyuan, Yaohai, Hefei, AnHui, China</p>
-							</div>
+						<div class="col-md-3">
+							<p><span>Address:</span> 1B 505 Yaolingyuan, Yaohai, Hefei, AnHui, China</p>
+						</div>
 						<div class="col-md-3">
 							<p><span>Phone:</span> <a href="tel://18140520096">+1 814 0520 096</a></p>
 						</div>
@@ -82,6 +88,7 @@
 					</div>
 					<!-- 联系表单 -->
 					<div class="row block-9">
+						<!-- 右侧表单 -->
 						<div class="col-md-6 order-md-last pr-md-5">
 							<form action="#">
 								<div class="form-group">
@@ -97,14 +104,15 @@
 									<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
-									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" style="width: 100%;">
 								</div>
 							</form>
 				
 						</div>
-
+						<!-- 左侧地图 -->
 						<div class="col-md-6">
-							<div id="map"></div>
+							<!-- <div id="map"></div> -->
+							<div id="container"></div>
 						</div>
 					</div>
 				</div>
@@ -120,40 +128,14 @@
 						<div class="col-md">
 							<div class="ftco-footer-widget mb-4 ml-md-4">
 								<h2 class="ftco-heading-2">Category</h2>
-								<ul class="list-unstyled categories">
-									<li><a href="https://blog.csdn.net/wwb44444/category_10012495.html">Machine Learning <span>(1)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/category_10005454.html">Database <span>(1)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/category_6914443.html">Java <span>(2)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/category_6994439.html">SE and Spider <span>(6)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/category_7045714.html">Assembly Language <span>(1)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/category_8623754.html">Algorithm <span>(1)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">Prose <span>(70)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">Literature <span>(17)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">Lyric <span>(23)</span></a></li>
-								</ul>
+								<ul class="list-unstyled categories" id="category"></ul>
 							</div>
 						</div>
 						<!-- Archives：第二列 -->
 						<div class="col-md">
 							<div class="ftco-footer-widget mb-4">
 								<h2 class="ftco-heading-2">Archives</h2>
-								<ul class="list-unstyled categories">
-									<li><a href="https://blog.csdn.net/wwb44444/article/month/2020/05">May 2020 <span>(2)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/article/month/2019/08">August 2019 <span>(1)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/article/month/2019/01">January 2019 <span>(1)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2019 <span>(3)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2018 <span>(2)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/article/month/2017/07">July 2017 <span>(5)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/article/month/2017/06">June 2017 <span>(2)</span></a></li>
-									<li><a href="https://blog.csdn.net/wwb44444/article/month/2017/05">May 2017 <span>(2)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2017 <span>(1)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2016 <span>(6)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2015 <span>(10)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2013 <span>(4)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2012 <span>(16)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2011 <span>(40)</span></a></li>
-									<li><a href="https://user.qzone.qq.com/1624949784/blog">2010 <span>(28)</span></a></li>
-								</ul>
+								<ul class="list-unstyled categories" id="archives"></ul>
 							</div>
 						</div>
 						<!-- Questions：第三列 -->
@@ -162,9 +144,9 @@
 								<h2 class="ftco-heading-2">Have a Questions?</h2>
 								<div class="block-23 mb-3">
 									<ul>
-										<li><span class="icon icon-location2"></span><span class="text">1B 505 Yaolingyuan, Yaohai, Hefei, AnHui, China</span></li>
-										<li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 814 0520 096</span></a></li>
-										<li><a href="#"><span class="icon icon-envelop"></span><span class="text">wangwenbo@whut.edu.cn</span></a></li>
+										<li><span class="icon icon-location2"></span><span class="text"></span></li>
+										<li></li>
+										<li></li>
 									</ul>
 								</div>
 							</div>
@@ -173,10 +155,7 @@
 					<!-- 下半部分 -->
 					<div class="row">
 						<div class="col-md-12">
-			
-							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
 						</div>
 					</div>
 				</div>
@@ -202,17 +181,59 @@
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
-	<script src="js/google-map.js"></script>
+	<!-- <script src="js/google-map.js"></script> -->
 	<script src="js/main.js"></script>
-	<script type="text/javascript">
-		//发送邮件
-		$(document).on("click", ".form-group .btn.btn-primary.py-3.px-5", function(){
-			var name = $(".form-group input[placeholder='Your Name']").val();
-			var email = $(".form-group input[placeholder='Your Email']").val();
-			var subject = $(".form-group input[placeholder='Subject']").val();
-			var message = $(".form-group textarea[placeholder='Message']").val();
-			location = "mailto:wangwenbo@whut.edu.cn?cc=" + email + "&subject=" + subject + "&body=" + message;
-		})
+	<script src="https://webapi.amap.com/maps?v=1.4.15&key=de213dd871bdf8e9460d54ea3a6b00e9"></script>
+	<script type="text/javascript">	
+		$.getJSON("https://qtxsnwwb.github.io/json/contact.json",function(data){
+			var lat = data.lat;
+			var lon = data.lon;
+			//加载高德地图
+			var map = new AMap.Map('container',{
+				zoom:15,   //级别
+				center:[lat,lon],    //中心点坐标
+				viewMode:'3D'    //使用3D视图
+			});
+			var marker = new AMap.Marker({
+				position:[lat,lon]    //点坐标
+			});
+			map.add(marker);     //添加到地图
+		});
+		
+		//加载底部栏json
+		$.getJSON("https://qtxsnwwb.github.io/json/bottom.json",function(data){
+			//填入侧边栏categories以及底部栏category
+			var categories = data.categories;
+			for(var i=0; i<categories.length; i++){
+				$("ul#category").append('<li><a href="'+categories[i].url+'">'+categories[i].name+' <span>'+categories[i].number+'</span></a></li>');	
+			}
+			//填入侧边栏archives以及底部栏archives
+			var archives = data.archives;
+			for(var i=0; i<archives.length; i++){
+				$("ul#archives").append('<li><a href="'+archives[i].url+'">'+archives[i].date+' <span>'+archives[i].number+'</span></a></li>');
+			}
+			//填入底部栏info
+			$(".block-23.mb-3 ul li span.text").eq(0).html(data.info.address);
+			$(".block-23.mb-3 ul li").eq(1).html('<a href="tel:\\'+data.info.phone+'"><span class="icon icon-phone"></span><span class="text">'+data.info.phone+'</span></a>');
+			$(".block-23.mb-3 ul li").eq(2).html('<a href="mailto:'+data.info.email+'"><span class="icon icon-envelop"></span><span class="text">'+data.info.email+'</span></a>');
+			//填入Contact Information
+			$(".row.d-flex.mb-5.contact-info .col-md-3 p").eq(0).html('<span>Address:</span> '+data.info.address+'');
+			$(".row.d-flex.mb-5.contact-info .col-md-3 p").eq(1).html('<span>Phone:</span> <a href="tel://'+data.info.phont+'">'+data.info.phone+'</a>');
+			$(".row.d-flex.mb-5.contact-info .col-md-3 p").eq(2).html('<span>Email:</span> <a href="mailto:'+data.info.email+'">'+data.info.email+'</a>');
+			$(".row.d-flex.mb-5.contact-info .col-md-3 p").eq(3).html('<span>Website:</span> <a href="'+'https://'+data.info.website+'">'+data.info.website+'</a>');
+		});
+		
+		$(function(){
+			//发送邮件
+			$(".form-group .btn.btn-primary.py-3.px-5").click(function(){
+				var name = $(".form-group input[placeholder='Your Name']").val();
+				var email = $(".form-group input[placeholder='Your Email']").val();
+				var subject = $(".form-group input[placeholder='Subject']").val();
+				var message = $(".form-group textarea[placeholder='Message']").val();
+				location = "mailto:wangwenbo@whut.edu.cn?cc=" + email + "&subject=" + subject + "&body=" + message;
+			});
+		});
+		
 	</script>
 
 </body>

@@ -563,12 +563,12 @@
 				//填入侧边栏categories以及底部栏category
 				var categories = data.categories;
 				for(var i=0; i<categories.length; i++){
-					$("ul#category").append('<li><a href="'+categories[i].url+'">'+categories[i].name+' <span>'+categories[i].number+'</span></a></li>')		
+					$("ul#category").append('<li><a href="'+categories[i].url+'">'+categories[i].name+' <span>'+categories[i].number+'</span></a></li>');		
 				}
 				//填入侧边栏archives以及底部栏archives
 				var archives = data.archives;
 				for(var i=0; i<archives.length; i++){
-					$("ul#archives").append('<li><a href="'+archives[i].url+'">'+archives[i].date+' <span>'+archives[i].number+'</span></a></li>')
+					$("ul#archives").append('<li><a href="'+archives[i].url+'">'+archives[i].date+' <span>'+archives[i].number+'</span></a></li>');
 				}
 				//填入底部栏info
 				$(".block-23.mb-3 ul li span.text").eq(0).html(data.info.address);
@@ -579,13 +579,13 @@
 			//加载主体部分json
 			$.getJSON("https://qtxsnwwb.github.io/json/index.json",function(data){
 				//填入主体部分介绍
-				$(".desc p.mb-4").html(data.intro)
+				$(".desc p.mb-4").html(data.intro);
 				//填入主体部分格言
 				$(".col-md-7.heading-section.text-center.ftco-animate p").html(data.motto);
 				//填入主体部分文章块
 				for(var i=0; i<$(".grid figcaption").length; i++){
-					$(".grid figcaption").eq(i).append('<h2>'+data.blog[i].figcaption.title_1+' <span>'+data.blog[i].figcaption.title_2+'</span></h2>')
-											.append('<p>'+data.blog[i].figcaption.keyword+'</p>')
+					$(".grid figcaption").eq(i).append('<h2>'+data.blog[i].figcaption.title_1+' <span>'+data.blog[i].figcaption.title_2+'</span></h2>');
+											.append('<p>'+data.blog[i].figcaption.keyword+'</p>');
 											.append('<a href="'+data.blog[i].url+'" target="_blank">View more</a>');
 					$(".category.mb-3.d-block").eq(i).html('<a href="'+data.blog[i].category_url+'">'+data.blog[i].figcaption.title_1+'</a>');
 					$(".text.text-2.pt-2.mt-3 h3.mb-4").eq(i).html('<a href="'+data.blog[i].url+'">'+data.blog[i].title+'</a>');
