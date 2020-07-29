@@ -42,7 +42,7 @@
 					<li class="colorlib-active"><a href="index.html">Home</a></li>
 					<li><a href="photography.html">Photography</a></li>
 					<li><a href="project.html">Project</a></li>
-					<li><a href="fashion.html">Fashion</a></li>
+					<li><a href="achievement.html">Achievement</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
@@ -134,7 +134,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/machine_learning.jpg" alt="machine-learning"/>
+										<img src="images/index/machine_learning.jpg" alt="machine-learning"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -164,7 +164,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/database.jpg" alt="database"/>
+										<img src="images/index/database.jpg" alt="database"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -194,7 +194,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/literature.jpg" alt="literature"/>
+										<img src="images/index/literature.jpg" alt="literature"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -224,7 +224,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/SE_and_spider.jpg" alt="SE-and-spider"/>
+										<img src="images/index/SE_and_spider.jpg" alt="SE-and-spider"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -254,7 +254,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/prose.jpg" alt="prose"/>
+										<img src="images/index/prose.jpg" alt="prose"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -284,7 +284,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/algorithm.jpg" alt="algorithm"/>
+										<img src="images/index/algorithm.jpg" alt="algorithm"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -314,7 +314,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/prose.jpg" alt="prose"/>
+										<img src="images/index/prose.jpg" alt="prose"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -344,7 +344,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/assembly_language.jpg" alt="assembly-language"/>
+										<img src="images/index/assembly_language.jpg" alt="assembly-language"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -374,7 +374,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/lyric.jpg" alt="lyric"/>
+										<img src="images/index/lyric.jpg" alt="lyric"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -404,7 +404,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/java.jpg" alt="java"/>
+										<img src="images/index/java.jpg" alt="java"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -434,7 +434,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/prose.jpg" alt="prose"/>
+										<img src="images/index/prose.jpg" alt="prose"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -464,7 +464,7 @@
 							<div class="blog-entry ftco-animate">
 								<div class="grid">
 									<figure class="effect-apollo" style="margin: 0;">
-										<img src="images/SE_and_spider.jpg" alt="SE-and-spider"/>
+										<img src="images/index/SE_and_spider.jpg" alt="SE-and-spider"/>
 										<figcaption></figcaption>			
 									</figure>
 								</div>
@@ -584,9 +584,7 @@
 				$(".col-md-7.heading-section.text-center.ftco-animate p").html(data.motto);
 				//填入主体部分文章块
 				for(var i=0; i<$(".grid figcaption").length; i++){
-					$(".grid figcaption").eq(i).append('<h2>'+data.blog[i].figcaption.title_1+' <span>'+data.blog[i].figcaption.title_2+'</span></h2>');
-											.append('<p>'+data.blog[i].figcaption.keyword+'</p>');
-											.append('<a href="'+data.blog[i].url+'" target="_blank">View more</a>');
+					$(".grid figcaption").eq(i).append('<h2>'+data.blog[i].figcaption.title_1+' <span>'+data.blog[i].figcaption.title_2+'</span></h2><p>'+data.blog[i].figcaption.keyword+'</p><a href="'+data.blog[i].url+'" target="_blank">View more</a>');
 					$(".category.mb-3.d-block").eq(i).html('<a href="'+data.blog[i].category_url+'">'+data.blog[i].figcaption.title_1+'</a>');
 					$(".text.text-2.pt-2.mt-3 h3.mb-4").eq(i).html('<a href="'+data.blog[i].url+'">'+data.blog[i].title+'</a>');
 					$(".text.text-2.pt-2.mt-3 p.mb-4").eq(i).html(data.blog[i].intro);
