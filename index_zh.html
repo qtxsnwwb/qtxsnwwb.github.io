@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>汪文博的个人主页</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="shortcut icon" href="assets/images/ice.png" type="image/x-icon"/>
+	<!-- <link rel="stylesheet" href="assets/layui/css/layui.css"> -->
+	<link rel="stylesheet" href="assets/css/index_zh.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body id="top" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<!--顶部导航栏-->
+<header>
+	<div class="profile-page sidebar-collapse">
+		<nav class="navbar navbar-expand-lg fixed-top bg-primary navbar-transparent" color-on-scroll="400">
+			<div class="container">
+				<div class="navbar-translate">
+					<a class="navbar-brand" href="#" rel="tooltip" data-original-title title>汪文博的个人主页</a>
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-bar bar1"></span>
+						<span class="navbar-toggler-bar bar2"></span>
+						<span class="navbar-toggler-bar bar3"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse justify-content-end collapse" id="navigation">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link smooth-scroll" href="#about">关于</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link smooth-scroll" href="#skill">技能</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link smooth-scroll" href="#portfolio">展示</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link smooth-scroll" href="#experience">经历</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link smooth-scroll" href="#contact">联系</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link smooth-scroll" href="index.html">切换到旧版主页</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<!-- <div class="layui-layout layui-layout-admin">	
+	<div class="layui-header">
+		<ul class="layui-nav layui-layout-left" id="nav-menu">
+			<li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+				<i class="layui-icon layui-icon-spread-left"></i>
+			</li>
+			<li class="layui-nav-item layui-hide-xs"><a href="">关于</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="">技能</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="">展示</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="">经历</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="">联系</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="index.html">切换到旧版主页</a></li>
+		</ul>
+		<ul class="layui-nav layui-layout-right">
+			<li class="layui-nav-item layui-show-md-inline-block">
+				<img src="assets/images/author.jpg" class="layui-nav-img" />
+				Wenbo Wang
+			</li>
+		</ul>
+	</div>	
+</div> -->
+
+<!--内容主体区域-->
+<div class="page-content">
+	<!--名片页-->
+	<div class="profile-page">
+		<div class="wrapper">
+			<div class="page-header page-header-smail">
+				<!--背景图-->
+				<div class="page-header-image" data-parallax="true"></div>
+				<!--内容-->
+				<div class="container">
+					<div class="content-center">
+						<!--头像-->
+						<div class="cc-profile-image">
+							<a href="#"><img src="assets/images/me.jpg" alt="Image"></a>
+						</div>
+						<!--文字-->
+						<div class="h2 title">汪文博（Wenbo Wang）</div>
+						<p class="category text-white">武汉理工大学交通运输工程硕士在读</p>
+						<!--联系我-->
+						<a class="btn btn-primary smooth-scroll mr-2 aos-init aos-animate" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">联系我</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--关于-->
+	<div class="section" id="about"></div>
+	<!--技能-->
+	<div class="section" id="skill"></div>
+	<!--展示-->
+	<div class="section" id="portfolio"></div>
+	<!--工作经历-->
+	<div class="section" id="experience"></div>
+	<!--项目经历-->
+	<div class="section" id="project"></div>
+	<!--联系-->
+	<div class="section" id="contact" tabindex="-1"></div>
+</div>
+
+
+<!-- <script src="assets/layui/layui.js"></script> -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.js"></script>
+<script type="text/javascript">
+// layui.use(['element', 'layer', 'util'], function(){
+// 	var element = layui.element,
+// 	layer = layui.layer,
+// 	util = layui.util,
+// 	$ = layui.$;
+	
+// 	//左侧导航栏展出
+// 	util.event('lay-header-event',{
+// 		menuLeft: function() {
+// 			// layer.msg('展开左侧菜单', {icon: 0});
+// 			layer.open({
+// 				type: 1,
+// 				title: "菜单",
+// 				content: '<div style="padding: 15px;">关于</div><div style="padding: 15px;">技能</div><div style="padding: 15px;">展示</div><div style="padding: 15px;">经历</div><div style="padding: 15px;">联系</div><div style="padding: 15px;">切换到旧版主页</div>',
+// 				area: ['260px', '100%'],
+// 				offset: 'lt',
+// 				anim: 3,
+// 				shadeClose: true
+// 			});
+// 		}
+// 	});
+	
+// });
+
+</script>
+</body>
+</html>
