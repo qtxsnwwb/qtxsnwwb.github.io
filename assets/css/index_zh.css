@@ -13,6 +13,52 @@ body {
 	background-color: #fff;
 }
 
+form {
+	display: block;
+	margin-top: 0em;
+}
+
+input {
+	-webkit-writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: start;
+	appearance: auto;
+	-webkit-rtl-ordering: logical;
+	cursor: text;
+	font: 400 13.3333px Arial;
+}
+
+textarea {
+	-webkit-writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: start;
+	appearance: auto;
+	-webkit-rtl-ordering: logical;
+	flex-direction: column;
+	cursor: text;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	column-count: initial !important;
+	font: 400 13.3333px Arial;
+}
+
+h4, .h4 {
+	font-size: 1.714em;
+	line-height: 1.45em;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
 .navbar.navbar-transparent {
 	background-color: transparent !important;
 	box-shadow: none;
@@ -26,6 +72,10 @@ body {
 	padding-bottom: 0.625rem;
 	min-height: 53px;
 	margin-bottom: 20px;
+}
+
+ul.navbar-nav {
+	margin-top: 0;
 }
 
 .nav-pills .nav-link .nav-item .navbar .nav-tabs {
@@ -76,10 +126,10 @@ ul {
 	padding-inline-start: 40px;
 }
 
-@media screen and (min-width: 992px) .navbar-nav .nav-item:not(:last-child) {
+/* @media screen and (min-width: 992px) .navbar-nav .nav-item:not(:last-child) {
 	margin-right: 5px;
 }
-
+ */
 li {
 	display: list-item;
 	text-align: -webkit-match-parent;
@@ -94,6 +144,10 @@ li {
 
 a:-webkit-any-link {
 	cursor: pointer;
+}
+
+#nav-about:hover, #nav-skill:hover, #nav-portfolio:hover, #nav-experience:hover, #nav-contact:hover, #nav-index:hover {
+	background-color: rgba(222, 222, 222, 0.3);
 }
 	
 	
@@ -154,9 +208,9 @@ a:-webkit-any-link {
 	position: relative;
 }
 
-a {
+/* a {
 	color: #378C3F;
-}
+} */
 
 .cc-profile-image img {
 	position: relative;
@@ -173,6 +227,8 @@ a {
 img {
 	max-width: 100%;
 	vertical-align: middle;
+	border-radius: 1px;
+	border-style: none;
 }
 
 .profile-page .title {
@@ -217,7 +273,7 @@ p {
 }
 
 .btn-primary {
-	background-color: #378C3F;
+	/* background-color: #378C3F; */
 	color: #FFFFFF;
 }
 
@@ -232,3 +288,254 @@ p {
 	padding: 11px 22px;
 	cursor: pointer;
 }
+ 
+.section {
+	padding: 70px 0;
+	padding-bottom: 0;
+	position: relative;
+	background: #FFFFFF;
+}
+
+.card .card-body {
+	min-height: 190px;
+}
+
+.card {
+	border: 0;
+	border-radius: 0.1875rem;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 25px 0px rgb(0 0 0 / 20%);
+}
+
+.title {
+	font-weight: 700;
+}
+
+.progress-container {
+	margin-bottom: 20px;
+	font-size: 18px;
+	position: relative;
+}
+
+.progress-container.progress-primary .progress-value, .progress-container.progress-primary .progress-badge {
+	color: #378C3F;
+}
+
+.progress-container .progress-badge {
+	font-size: 0.8571em;
+	text-transform: uppercase;
+}
+
+.progress-container.progress-primary .progress {
+	background: rgba(55, 140, 63, 0.4);
+}
+
+.progress-container .progress {
+	height: 5px;
+	font-size: 18px;
+	border-radius: 0;
+	box-shadow: none;
+	margin-top: 14px;
+}
+
+.progress-container.progress-primary .progress-bar {
+	background: #378C3F;
+}
+
+.progress-container .progress .progress-bar {
+	box-shadow: none;
+}
+
+.progress-container .aos-animate {
+	transform: scaleX(1);
+}
+
+.progress-container .progress-bar {
+	height: 5px;
+	transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
+	transition-property: transform , -webkit-transform;
+	transition-delay: 0s, 0s;
+	transform-origin: 0% 0%;
+}
+
+.progress-container .progress .progress-value {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	font-size: 0.8571em;
+}
+
+.img-raised {
+	box-shadow: 0px 10px 25px 0px rgb(0 0 0 / 30%);
+}
+
+.gallery .cc-porfolio-image figure {
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.gallery figure.cc-effect img, .gallery figure.cc-effect figcaption::before, .gallery figure.cc-effect figcaption::after, .gallery figure.cc-effect p {
+	transition: opacity 0.35s, transform 0.35s, -webkit-tansform 0.35s; 
+	transition-property: opacity, transform, -webkit-transform;
+	transition-duration: 0.35s, 0.35s, 0.35s;
+	transition-timing-function: ease, ease, ease;
+	transition-delay: 0s, 0s, 0s;
+}
+
+.gallery figure.cc-effect img, .gallery figure.cc-effect .h4 {
+	transform: scale(1.06, 1.06);
+}
+
+.gallery .cc-porfolio-image figure img {
+	position: relative;
+	display: block;
+	max-width: 100%;
+	opacity: 1;
+}
+
+.gallery .cc-porfolio-image figure figcaption, .gallery .cc-porfolio-image figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.gallery .cc-porfolio-image figure figcaption {
+	color: #fff;
+}
+
+.gallery figure.cc-effect .h4 {
+	margin-top: 25%;
+	opacity: 0;
+}
+
+.gallery .cc-porfolio-image figure .h4, .gallery .cc-porfolio-image figure p {
+	margin: 0;
+}
+
+.gallery figure.cc-effect p, .gallery figure.cc-effect button {
+	padding: 0.5em 2em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	opacity: 0;
+}
+
+/* .bg-primary {
+	background-color: #378C3F !important;
+} */
+
+.cc-experience .cc-experience-header {
+	padding-top: 60px;
+	padding-right: 0;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+h5, .h5 {
+	font-size: 1.57em;
+	line-height: 1.4em;
+	margin-bottom: 15px;
+}
+
+.card-body ul {
+	padding-inline-start: 1rem;
+}
+
+.card-body {
+	flex: 1 1 auto;
+	padding: 1.25rem;
+}
+
+.cc-project .cc-project-header {
+	padding-top: 60px;
+	padding-right: 0;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.cc-contact-information {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-image: url('../images/bg_10.jpg');
+	background-size: cover;
+}
+
+.cc-contact-information .cc-contact {
+	padding: 8% 0 8% 20%;
+}
+
+.input-group, .form-group {
+	margin-bottom: 10px;
+}
+
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+	border-right: 0 none;
+}
+
+.form-group .input-group-addon, .input-group .input-group-addon {
+	padding: 10px 0 10px 18px;
+}
+
+.input-group-addon {
+	background-color: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	border-radius: 30px;
+	color: #555555;
+	transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.input-group-addon i {
+	width: 17px;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child) {
+	border-left: 0 none;
+}
+
+.form-group .input-group-addon + .form-control, .form-group .input-group-addon ~ .form-control, .input-group .input-group-addon + .form-control, .input-group .input-group-addon ~ .form-control {
+	padding: 10px 19px 11px 16px;
+}
+
+.form-control {
+	background-color: transparent;
+	border: 1px solid #E3E3E3;
+	border-radius: 30px;
+	color: #2c2c2c;
+	line-height: normal;
+	font-size: 0.8571em;
+	transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	box-shadow: none;
+}
+
+.form-group {
+	position: relative;
+}
+
+textarea.form-control {
+	max-width: 100%;
+	resize: none;
+	border: none;
+	border-bottom: 1px solid #E3E3E3;
+	border-radius: 0;
+	line-height: 2;
+}
+
+#contactContainer {
+	padding-bottom: 40px;
+}
+
+.footer {
+	padding: 24px 0;
+}
+
+
+

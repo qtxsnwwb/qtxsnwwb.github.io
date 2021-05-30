@@ -6,12 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="shortcut icon" href="assets/images/ice.png" type="image/x-icon"/>
-	<!-- <link rel="stylesheet" href="assets/layui/css/layui.css"> -->
-	<link rel="stylesheet" href="assets/css/index_zh.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/aos.css">
+	<link rel="stylesheet" href="assets/css/icomoon.css">
+	<link rel="stylesheet" href="assets/css/index_zh.css">
+	<style>
+		[v-clock] {
+			display: none;
+		}
+	</style>
 </head>
 <body id="top" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<div id="vue" v-clock>
 <!--顶部导航栏-->
 <header>
 	<div class="profile-page sidebar-collapse">
@@ -25,25 +31,25 @@
 						<span class="navbar-toggler-bar bar3"></span>
 					</button>
 				</div>
-				<div class="navbar-collapse justify-content-end collapse" id="navigation">
+				<div class="collapse navbar-collapse justify-content-end" id="navigation">
 					<ul class="navbar-nav">
-						<li class="nav-item">
+						<li class="nav-item" id="nav-about">
 							<a class="nav-link smooth-scroll" href="#about">关于</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item" id="nav-skill">
 							<a class="nav-link smooth-scroll" href="#skill">技能</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item" id="nav-portfolio">
 							<a class="nav-link smooth-scroll" href="#portfolio">展示</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item" id="nav-experience">
 							<a class="nav-link smooth-scroll" href="#experience">经历</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item" id="nav-contact">
 							<a class="nav-link smooth-scroll" href="#contact">联系</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link smooth-scroll" href="index.html">切换到旧版主页</a>
+						<li class="nav-item" id="nav-index">
+							<a class="nav-link" href="index.html">切换到旧版主页</a>
 						</li>
 					</ul>
 				</div>
@@ -51,28 +57,6 @@
 		</nav>
 	</div>
 </header>
-
-<!-- <div class="layui-layout layui-layout-admin">	
-	<div class="layui-header">
-		<ul class="layui-nav layui-layout-left" id="nav-menu">
-			<li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
-				<i class="layui-icon layui-icon-spread-left"></i>
-			</li>
-			<li class="layui-nav-item layui-hide-xs"><a href="">关于</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="">技能</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="">展示</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="">经历</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="">联系</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="index.html">切换到旧版主页</a></li>
-		</ul>
-		<ul class="layui-nav layui-layout-right">
-			<li class="layui-nav-item layui-show-md-inline-block">
-				<img src="assets/images/author.jpg" class="layui-nav-img" />
-				Wenbo Wang
-			</li>
-		</ul>
-	</div>	
-</div> -->
 
 <!--内容主体区域-->
 <div class="page-content">
@@ -91,57 +75,476 @@
 						</div>
 						<!--文字-->
 						<div class="h2 title">汪文博（Wenbo Wang）</div>
-						<p class="category text-white">武汉理工大学交通运输工程硕士在读</p>
+						<p class="category text-white">{{info.identity}}</p>
 						<!--联系我-->
-						<a class="btn btn-primary smooth-scroll mr-2 aos-init aos-animate" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">联系我</a>
+						<a class="btn btn-primary smooth-scroll mr-2 aos-init aos-animate" href="#contact" data-aos="zoom-in">联系我</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--关于-->
-	<div class="section" id="about"></div>
+	<div class="section" id="about">
+		<div class="container">
+			<div class="card aos-init aos-animate" data-aos="fade-up" data-aos-offset="10">
+				<div class="row">
+					<!--关于部分-->
+					<div class="col-lg-6 col-md-12">
+						<div class="card-body">
+							<div class="h4 mt-0 title">关于</div>
+							<p>{{info.about_1}}</p>
+							<p>{{info.about_2}}</p>
+						</div>
+					</div>
+					<!--基本信息部分-->
+					<div class="col-lg-6 col-md-12">
+						<div class="card-body">
+							<div class="h4 mt-0 title">基本信息</div>
+							<div class="row">
+								<div class="col-sm-4">
+									<strong class="text-uppercase">年龄：</strong>
+								</div>
+								<div class="col-sm-8">{{info.age}}</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-4">
+									<strong class="text-uppercase">邮箱:</strong>
+								</div>
+								<div class="col-sm-8">
+									<a href="mailto:1624949784@qq.com">{{info.email}}</a>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-4">
+									<strong class="text-uppercase">QQ：</strong>
+								</div>
+								<div class="col-sm-8">{{info.QQ}}</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-4">
+									<strong class="text-uppercase">微信：</strong>
+								</div>
+								<div class="col-sm-8">{{info.weixin}}</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-4">
+									<strong class="text-uppercase">地址：</strong>
+								</div>
+								<div class="col-sm-8">{{info.address}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!--技能-->
-	<div class="section" id="skill"></div>
+	<div class="section" id="skill">
+		<div class="container">
+			<div class="h4 text-center mb-4 title">专业技能</div>
+			<div class="card aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_1}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_1}"></div>
+									<span class="progress-value">{{info.progress_1}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_2}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_2}"></div>
+									<span class="progress-value">{{info.progress_2}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_3}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_3}"></div>
+									<span class="progress-value">{{info.progress_3}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_4}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_4}"></div>
+									<span class="progress-value">{{info.progress_4}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_5}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_5}"></div>
+									<span class="progress-value">{{info.progress_5}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_6}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_6}"></div>
+									<span class="progress-value">{{info.progress_6}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_7}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_7}"></div>
+									<span class="progress-value">{{info.progress_7}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="progress-container progress-primary">
+								<span class="progress-badge">{{info.skill_8}}</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
+									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" v-bind:style="{width: info.progress_8}"></div>
+									<span class="progress-value">{{info.progress_8}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!--展示-->
-	<div class="section" id="portfolio"></div>
+	<div class="section" id="portfolio">
+		<div class="container">
+			<div class="h4 text-center mb-4 title">项目展示</div>
+			<div class="tab-content gallery">
+				<div class="tab-pane active">
+					<div class="ml-auto mr-auto">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a href="" target="">
+										<figure class="cc-effect">
+											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<figcaption>
+												<div class="h4">xxxx</div>
+												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+											</figcaption>
+										</figure>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!--工作经历-->
-	<div class="section" id="experience"></div>
+	<div class="section" id="experience">
+		<div class="container cc-experience">
+			<div class="h4 text-center mb-4 title">工作经历</div>
+			<div class="card" v-for="exper in info.experience">
+				<div class="row">
+					<div class="col-md-3 bg-primary aos-init aos-animate" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+						<div class="card-body cc-experience-header">
+							<p>{{exper.time}}</p>
+							<div class="h5">{{exper.company}}</div>
+						</div>
+					</div>
+					<div class="col-md-9 aos-init aos-animate" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+						<div class="card-body">
+							<div class="h5">{{exper.job}}</div>
+							<p></p>
+							<ul>
+								<li  v-for="con in exper.content">{{con.period}}</li>
+							</ul>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!--项目经历-->
-	<div class="section" id="project"></div>
+	<div class="section" id="project">
+		<div class="container cc-project">
+			<div class="h4 text-center mb-4 title">项目经历</div>
+			<div class="card" v-for="pro in info.project">
+				<div class="row">
+					<div class="col-md-3 bg-primary aos-init aos-animate" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+						<div class="card-body cc-project-header">
+							<p>{{pro.time}}</p>
+							<div class="h5">{{pro.company}}</div>
+						</div>
+					</div>
+					<div class="col-md-9 aos-init aos-animate" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+						<div class="card-body">
+							<div class="h5">{{pro.name}}</div>
+							<p>{{pro.intro}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!--联系-->
-	<div class="section" id="contact" tabindex="-1"></div>
+	<div class="section" id="contact">
+		<div class="cc-contact-information">
+			<div class="container">
+				<div class="cc-contact">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="card mb-0 aos-init aos-animate" data-aos="zoom-in" id="contactContainer">
+								<div class="h4 text-center title">联系我</div>
+								<div class="row">
+									<!--左半部分-->
+									<div class="col-md-6">
+										<div class="card-body">
+											<form action="#" method="post" id="emailForm">
+												<div class="p pb-3">
+													<strong>欢迎随时联系我</strong>
+												</div>
+												<div class="row mb-3">
+													<div class="col">
+														<div class="input-group">
+															<span class="input-group-addon">
+																<i class="icon-copy"></i>
+															</span>
+															<input class="form-control" type="text" name="subject" placeholder="主题" required="required"  />
+														</div>
+													</div>
+												</div>
+												<div class="row mb-3">
+													<div class="col">
+														<div class="form-group">
+															<textarea class="form-control" name="body" placeholder="说点什么" required rows="4"></textarea>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col">
+														<button class="btn btn-primary" id="sendEmail">提交</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<!--右半部分-->
+									<div class="col-md-6">
+										<div class="card-body">
+											<p class="mb-0">
+												<strong>地址</strong>
+											</p>
+											<p class="pb-2">{{info.address}}</p>
+											<p class="mb-0">
+												<strong>邮箱</strong>
+											</p>
+											<p>
+												<a href="mailto:1624949784@qq.com">{{info.email}}</a>
+											</p>
+											<p class="mb-0">
+												<strong>微信 / QQ</strong>
+											</p>
+											<p class="pb-2">
+												<img width="50%" src="assets/images/weixin.png" style="float: left;" />
+												<img width="50%" src="assets/images/QQ.png" style="float: left;" />
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
+<!--底部区域-->
+<footer class="footer">
+	<div class="text-center text-muted">
+		<p>
+			汪文博的个人主页
+			<a href="https://qtxsnwwb.github.io/index_zh.html">https://qtxsnwwb.github.io/index_zh.html</a>
+		</p>
+	</div>
+</footer>
 
-<!-- <script src="assets/layui/layui.js"></script> -->
+</div>
+
+<script src="assets/js/vue.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/now-ui-kit.js"></script>
 <script src="assets/js/aos.js"></script>
+<script src="assets/js/index_zh.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript">
-// layui.use(['element', 'layer', 'util'], function(){
-// 	var element = layui.element,
-// 	layer = layui.layer,
-// 	util = layui.util,
-// 	$ = layui.$;
-	
-// 	//左侧导航栏展出
-// 	util.event('lay-header-event',{
-// 		menuLeft: function() {
-// 			// layer.msg('展开左侧菜单', {icon: 0});
-// 			layer.open({
-// 				type: 1,
-// 				title: "菜单",
-// 				content: '<div style="padding: 15px;">关于</div><div style="padding: 15px;">技能</div><div style="padding: 15px;">展示</div><div style="padding: 15px;">经历</div><div style="padding: 15px;">联系</div><div style="padding: 15px;">切换到旧版主页</div>',
-// 				area: ['260px', '100%'],
-// 				offset: 'lt',
-// 				anim: 3,
-// 				shadeClose: true
-// 			});
-// 		}
-// 	});
-	
-// });
+var vm = new Vue({
+	el: '#vue',
+	data() {
+		return {
+			info: {
+				identity: null,
+				about_1: null,
+				about_2: null,
+				age: null,
+				email: null,
+				QQ: null,
+				weixin: null,
+				address: null,
+				skill_1: null,
+				skill_2: null,
+				skill_3: null,
+				skill_4: null,
+				skill_5: null,
+				skill_6: null,
+				skill_7: null,
+				skill_8: null,
+				progress_1: null,
+				progress_2: null,
+				progress_3: null,
+				progress_4: null,
+				progress_5: null,
+				progress_6: null,
+				progress_7: null,
+				progress_8: null,
+				project: null,
+				experience: null
+			}
+		}
+	},
+	mounted() {
+		axios.get("assets/json/index_zh.json").then(response=>(this.info=response.data));
+	}
+});
 
 </script>
 </body>
