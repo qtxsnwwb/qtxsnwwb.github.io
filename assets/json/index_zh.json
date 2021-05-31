@@ -7,22 +7,48 @@
 	"QQ": "1624949784",
 	"weixin": "wwb19970525",
 	"address": "湖北省武汉市",
-	"skill_1": "Java",
-	"skill_2": "数据库",
-	"skill_3": "SpringBoot",
-	"skill_4": "MyBatis",
-	"skill_5": "Android",
-	"skill_6": "JavaScript",
-	"skill_7": "Vue",
-	"skill_8": "Css",
-	"progress_1": "90%",
-	"progress_2": "80%",
-	"progress_3": "80%",
-	"progress_4": "80%",
-	"progress_5": "75%",
-	"progress_6": "60%",
-	"progress_7": "60%",
-	"progress_8": "50%",
+	"skill": [
+		[
+			{
+				"name": "Java",
+				"progress": "90%"
+			},
+			{
+				"name": "数据库",
+				"progress": "80%"
+			}
+		],
+		[
+			{
+				"name": "SpringBoot",
+				"progress": "80%"
+			},
+			{
+				"name": "MyBatis",
+				"progress": "80%"
+			}
+		],
+		[
+			{
+				"name": "Android",
+				"progress": "75%"
+			},
+			{
+				"name": "JavaScript",
+				"progress": "60%"
+			}
+		],
+		[
+			{
+				"name": "Vue",
+				"progress": "60%"
+			},
+			{
+				"name": "Css",
+				"progress": "50%"
+			}
+		]
+	],
 	"experience": [
 		{
 			"time": "2021年7月-2021年8月",
@@ -75,5 +101,67 @@
 			"name": "国风汉服",
 			"intro": "我负责前端代码的编写，编写量为项目的一半。"
 		}
+	],
+	"display": [
+		[
+			{
+				"title": "个人博客",
+				"description": "CSDN个人博客与问题总结，包含文章20+，累计访问量11000+。",
+				"url": "https://blog.csdn.net/wwb44444",
+				"image": "assets/images/display/csdn.jpg"
+			},
+			{
+				"title": "Github",
+				"description": "个人开源项目",
+				"url": "https://github.com/qtxsnwwb",
+				"image": "assets/images/display/github.jpg"
+			},
+			{
+				"title": "QQ空间",
+				"description": "发表原创诗歌，散文等，记录美好生活中的点击感悟。",
+				"url": "https://user.qzone.qq.com/1624949784/blog",
+				"image": "assets/images/display/QQ空间.jpg"
+			}
+		],
+		[
+			{
+				"title": "书趣",
+				"description": "书籍推荐系统，涵盖多种推荐算法进行多角度推荐，并融合机器学习算法和爬虫完成论坛、评分、检索、过滤等多种功能，是推荐算法与图书馆、论坛等多项目的结合体。",
+				"url": "https://github.com/qtxsnwwb/shuqu",
+				"image": "assets/images/display/library.jpg"
+			},
+			{
+				"title": "千金方",
+				"description": "智慧医疗系统，Android+Web项目，包含Android端与Web端的协作。实现线上就诊的一系列功能。",
+				"url": "https://github.com/qtxsnwwb/MedicalProject",
+				"image": "assets/images/display/medical.jpg"
+			},
+			{
+				"title": "众里寻他",
+				"description": "网申招聘管理系统，基于SSH框架，包含前端申请与后台管理，可用于企业网申招聘系统模板。",
+				"url": "https://github.com/qtxsnwwb/EnterpriseApplication",
+				"image": "assets/images/display/enterprise.jpg"
+			}
+		],
+		[
+			{
+				"title": "'爬'你所享",
+				"description": "应用爬虫项目，基于Python GUI，应用Tkinter等库完成多源信息的爬取，实现信息获取、对比与共享，打破网站之间的信息壁垒。",
+				"url": "https://github.com/qtxsnwwb/SpiderProject",
+				"image": "assets/images/display/spider.jpg"
+			},
+			{
+				"title": "海上数据挖掘可视化分析系统",
+				"description": "与海军工程大学合作的项目，开发应用端软件，实现对海上AIS数据的数据挖掘及其可视化。主体通过PyQt编写。由于存在保密协议，仅上传Web端代码。",
+				"url": "https://github.com/qtxsnwwb/visualizationSystem",
+				"image": "assets/images/display/sea.jpg"
+			},
+			{
+				"title": "交通流预测",
+				"description": "基于AIS数据的船舶交通流预测，运用CNN-LSTM模型从时空双维度进行预测，代码包括训练结果模型与源代码。",
+				"url": "https://github.com/qtxsnwwb/TrafficFlowPrediction",
+				"image": "assets/images/display/traffic.jpg"
+			}
+		]
 	]
 }

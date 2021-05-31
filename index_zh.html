@@ -144,98 +144,15 @@
 			<div class="h4 text-center mb-4 title">专业技能</div>
 			<div class="card aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 				<div class="card-body">
-					<div class="row">
-						<div class="col-md-6">
+					<div class="row" v-for="sk in info.skill">
+						<div class="col-md-6" v-for="item in sk">
 							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_1}}</span>
+								<span class="progress-badge">{{item.name}}</span>
 								<div class="progress">
 									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
 									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_1}"></div>
-									<span class="progress-value">{{info.progress_1}}</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_2}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_2}"></div>
-									<span class="progress-value">{{info.progress_2}}</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_3}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_3}"></div>
-									<span class="progress-value">{{info.progress_3}}</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_4}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_4}"></div>
-									<span class="progress-value">{{info.progress_4}}</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_5}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_5}"></div>
-									<span class="progress-value">{{info.progress_5}}</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_6}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_6}"></div>
-									<span class="progress-value">{{info.progress_6}}</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_7}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_7}"></div>
-									<span class="progress-value">{{info.progress_7}}</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="progress-container progress-primary">
-								<span class="progress-badge">{{info.skill_8}}</span>
-								<div class="progress">
-									<div class="progress-bar progress-bar-primary aos-init aos-animate" data-aos="progress-full"
-									data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-									aria-valuemax="100" v-bind:style="{width: info.progress_8}"></div>
-									<span class="progress-value">{{info.progress_8}}</span>
+									aria-valuemax="100" v-bind:style="{width: item.progress}"></div>
+									<span class="progress-value">{{item.progress}}</span>
 								</div>
 							</div>
 						</div>
@@ -252,106 +169,14 @@
 				<div class="tab-pane active">
 					<div class="ml-auto mr-auto">
 						<div class="row">
-							<div class="col-md-4">
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
+							<div class="col-md-4" v-for="dis in info.display">
+								<div v-for="item in dis" class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+									<a v-bind:href="item.url" target="_blank">
 										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
+											<img v-bind:src="item.image" width="100%" alt="csdn" />
 											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
-											</figcaption>
-										</figure>
-									</a>
-								</div>
-								<div class="cc-porfolio-image img-raised aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-									<a href="" target="">
-										<figure class="cc-effect">
-											<img src="assets/images/achieve/achieve_1.jpg" width="100%" alt="" />
-											<figcaption>
-												<div class="h4">xxxx</div>
-												<p>32dwfwefcsdcvdsdsfsdfsdfew</p>
+												<div class="h4">{{item.title}}</div>
+												<p>{{item.description}}</p>
 											</figcaption>
 										</figure>
 									</a>
@@ -520,24 +345,10 @@ var vm = new Vue({
 				QQ: null,
 				weixin: null,
 				address: null,
-				skill_1: null,
-				skill_2: null,
-				skill_3: null,
-				skill_4: null,
-				skill_5: null,
-				skill_6: null,
-				skill_7: null,
-				skill_8: null,
-				progress_1: null,
-				progress_2: null,
-				progress_3: null,
-				progress_4: null,
-				progress_5: null,
-				progress_6: null,
-				progress_7: null,
-				progress_8: null,
+				skill: null,
 				project: null,
-				experience: null
+				experience: null,
+				display: null
 			}
 		}
 	},

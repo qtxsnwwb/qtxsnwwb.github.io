@@ -261,11 +261,6 @@ h2, .h2 {
 p {
 	line-height: 1.61em;
 	margin-bottom: 1rem;
-	display: block;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
 }
 
 .page-header .btn {
@@ -381,10 +376,6 @@ p {
 
 .gallery figure.cc-effect img, .gallery figure.cc-effect figcaption::before, .gallery figure.cc-effect figcaption::after, .gallery figure.cc-effect p {
 	transition: opacity 0.35s, transform 0.35s, -webkit-tansform 0.35s; 
-	transition-property: opacity, transform, -webkit-transform;
-	transition-duration: 0.35s, 0.35s, 0.35s;
-	transition-timing-function: ease, ease, ease;
-	transition-delay: 0s, 0s, 0s;
 }
 
 .gallery figure.cc-effect img, .gallery figure.cc-effect .h4 {
@@ -396,6 +387,7 @@ p {
 	display: block;
 	max-width: 100%;
 	opacity: 1;
+	height: 270px;
 }
 
 .gallery .cc-porfolio-image figure figcaption, .gallery .cc-porfolio-image figure figcaption > a {
@@ -408,11 +400,17 @@ p {
 
 .gallery .cc-porfolio-image figure figcaption {
 	color: #fff;
+	backface-visibility: hidden;
 }
 
 .gallery figure.cc-effect .h4 {
 	margin-top: 25%;
+	transition: transform 0.35s, -webkit-transform 0.35s;
 	opacity: 0;
+}
+
+figcaption {
+	padding-top: 25%;
 }
 
 .gallery .cc-porfolio-image figure .h4, .gallery .cc-porfolio-image figure p {
@@ -426,9 +424,116 @@ p {
 	opacity: 0;
 }
 
-/* .bg-primary {
-	background-color: #378C3F !important;
-} */
+.gallery .cc-porfolio-image figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.gallery figure.cc-effect figcaption::before,
+.gallery figure.cc-effect figcaption::after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+}
+
+.gallery figure.cc-effect figcaption::before {
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.gallery figure.cc-effect figcaption::after {
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+@media (max-width: 480px) {
+  .gallery figure.cc-effect .h4 {
+    font-size: 14px;
+  }
+}
+
+.gallery figcaption .container {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
+
+.gallery figure.cc-effect p,
+.gallery figure.cc-effect button {
+  padding: 0.5em 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  opacity: 0;
+}
+
+.gallery figure.cc-effect img,
+.gallery figure.cc-effect .h4 {
+  -webkit-transform: scale(1.06, 1.06);
+  transform: scale(1.06, 1.06);
+}
+
+.gallery figure.cc-effect img,
+.gallery figure.cc-effect figcaption::before,
+.gallery figure.cc-effect figcaption::after,
+.gallery figure.cc-effect p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.gallery figure.cc-effect:hover img {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.gallery figure.cc-effect:hover figcaption::before,
+.gallery figure.cc-effect:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.gallery figure.cc-effect:hover figcaption:before {
+  background: rgba(27, 23, 23, 0.5);
+}
+
+.gallery figure.cc-effect:hover .h4,
+.gallery figure.cc-effect:hover p,
+.gallery figure.cc-effect:hover button {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: #fff;
+}
+
+.gallery figure.cc-effect:hover figcaption::after,
+.gallery figure.cc-effect:hover .h4,
+.gallery figure.cc-effect:hover p,
+.gallery figure.cc-effect:hover img {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
 
 .cc-experience .cc-experience-header {
 	padding-top: 60px;
